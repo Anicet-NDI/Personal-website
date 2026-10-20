@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ndinayo Anicet | Mathematical Scientist (Epidemiology)</title>
+    <meta name="description" content="Portfolio of Ndinayo Anicet - Master's student in Mathematical Science (Epidemiology) at AIMS Rwanda, applying mathematical and statistical methods to public health.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Ndinayo Anicet | Epidemiology & Statistics">
+    <meta property="og:description" content="Applying mathematical and statistical methods to solve public health challenges">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anicet-ndi.github.io">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js and related libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner">
+            <div class="cube">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face right"></div>
+                <div class="face left"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+        </div>
+        <p class="loading-text">Loading Portfolio...</p>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <div id="threejs-background"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav-3d">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">NA</span>
+                <span class="logo-name">Ndinayo Anicet</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="home-container">
+                <div class="home-left">
+                    <div class="floating-badge">Epidemiology, Data Science &amp; AI</div>
+                    <h1 class="home-title">
+                        <span class="title-line">Hi, I'm</span>
+                        <span class="title-name">Ndinayo <span class="highlight">Anicet</span></span>
+                    </h1>
+                    <p class="home-subtitle">
+                        Applying <span class="highlight">mathematical</span> and <span class="highlight">statistical methods</span>
+                        to solve public health challenges.
+                    </p>
+                    <p class="home-description">
+                        Master's student in Mathematical Science (Epidemiology) at AIMS Rwanda. Enthusiastic about epidemiological modeling, data science, machine learning,
+                        data-driven decision making, and using computational tools to address real-world problems.
+                    </p>
+                    <div class="home-buttons">
+                        <a href="#contact" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
+                        <a href="#projects" class="btn-secondary">
+                            <i class="fas fa-code"></i> View My Work
+                        </a>
+                        <a href="New version of CV-Ndinayo Anicet Dec 2025.pdf" class="btn-tertiary" download>
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                    <div class="home-social">
+                        <a href="https://github.com/Anicet-NDI" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/anicet-ndinayo-015a1a399" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:ndinayoanicet@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="New version of CV-Ndinayo Anicet Dec 2025.pdf" class="social-icon" download>
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home-right">
+                    <div class="floating-shapes">
+                        <div class="shape cube" data-depth="0.2"></div>
+                        <div class="shape sphere" data-depth="0.3"></div>
+                        <div class="shape pyramid" data-depth="0.1"></div>
+                    </div>
+                    <div class="profile-3d">
+                        <div class="avatar-container">
+                            <img src="Anicet.jpg" alt="Ndinayo Anicet" class="profile-image" id="profile-img" onerror="showPlaceholder()">
+                            <div class="profile-ring"></div>
+                            <div class="profile-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">My Journey & Philosophy</p>
+            </div>
+            <div class="about-container">
+                <div class="about-left">
+                    <div class="about-card">
+                        <div class="about-image">
+                            <img src="Anicet.jpg" alt="Ndinayo Anicet" class="about-profile-image" id="about-profile-img" onerror="showAboutPlaceholder()">
+                            <div class="image-placeholder" id="about-placeholder" style="display: none;">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="about-quote">
+                            <p>"Committed to continuous learning and evidence-based solutions in healthcare and development."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <div class="about-content">
+                        <p class="about-text">
+                            I am a passionate researcher with a strong interest in applying mathematical and statistical
+                            methods to solve public health challenges. I am currently pursuing a Master's in Mathematical Science
+                            (Epidemiology) at AIMS Rwanda, specializing in mathematical modeling for disease spread and public health.
+                        </p>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Education</h4>
+                                    <p>M.Sc. Mathematical Science, Epidemiology (AIMS Rwanda) | B.Sc. Applied Statistics, Demography (University of Rwanda)</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <h4>Experience</h4>
+                                    <p>Research Assistant @ University of Burundi | Public Health Data Analyst Intern @ AIMS RIC | Data Collection Cooperator @ NISR</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Kigali, Rwanda</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-language"></i>
+                                <div>
+                                    <h4>Languages</h4>
+                                    <p>English | Kinyarwanda</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="interest-areas">
+                            <h3>Interest Areas</h3>
+                            <div class="interests-grid">
+                                <span class="interest-tag">Epidemiological Modeling</span>
+                                <span class="interest-tag">Disease Spread Modeling</span>
+                                <span class="interest-tag">Public Health</span>
+                                <span class="interest-tag">Machine Learning</span>
+                                <span class="interest-tag">Artificial Intelligence</span>
+                                <span class="interest-tag">Data Science</span>
+                                <span class="interest-tag">Survival Analysis</span>
+                                <span class="interest-tag">Demography</span>
+                                <span class="interest-tag">Resource Allocation Optimization</span>
+                                <span class="interest-tag">Data-Driven Decision Making</span>
+                                <span class="interest-tag">Statistical Computing</span>
+                                <span class="interest-tag">Evidence-Based Policy</span>
+                                <span class="interest-tag">Research Methodology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">Academic &amp; Professional Journey</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 2026 - Sept 2026</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Research Assistant, Infectious Disease Modeling</h3>
+                            <h4 class="timeline-company">University of Burundi, Burundi</h4>
+                            <ul class="timeline-details">
+                                <li>Supported research on mathematical modeling of infectious disease transmission</li>
+                                <li>Applied statistical, machine learning and optimization methods to epidemiological data</li>
+                                <li>Contributed to evidence-based analysis for public health decision-making</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">May 2026 - Sept 2026</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Master's Thesis & Internship Project</h3>
+                            <h4 class="timeline-company">AIMS Rwanda</h4>
+                            <ul class="timeline-details">
+                                <li>Optimization of Resource Allocation for Cholera Prevention in Burundi</li>
+                                <li>Developing models to optimize allocation of limited public health resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 2026 - July 2026</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Public Health Data Analyst (Internship)</h3>
+                            <h4 class="timeline-company">AIMS RIC, Rwanda</h4>
+                            <ul class="timeline-details">
+                                <li>Cleaned, analyzed and visualized public health data using R and Python</li>
+                                <li>Applied data science and machine learning techniques to health datasets</li>
+                                <li>Prepared findings to support evidence-based decision-making</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025 - 2026</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Master's in Mathematical Science (Epidemiology)</h3>
+                            <h4 class="timeline-company">AIMS Rwanda</h4>
+                            <p class="timeline-details">Specializing in mathematical modeling for disease spread and public health, with advanced coursework in statistical methods and computational mathematics.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Data Collection Cooperator</h3>
+                            <h4 class="timeline-company">National Institute of Statistics of Rwanda (NISR)</h4>
+                            <ul class="timeline-details">
+                                <li>Conducted field data collection for the Demographic and Health Survey (DHS)</li>
+                                <li>Applied rigorous data validation and quality assurance protocols</li>
+                                <li>Collaborated with the team to ensure timely project completion</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - 2025</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Bachelor's in Applied Statistics (Demography)</h3>
+                            <h4 class="timeline-company">University of Rwanda</h4>
+                            <p class="timeline-details">School of Business and Economics. Thesis: Rwanda Population Projection 2050 - Analyzing demographic trends and labor market impacts.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-subtitle">Tools, Methods &amp; Strengths</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i> Technical Skills
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="100">
+                            <div class="skill-info">
+                                <span class="skill-name">Statistical Analysis</span>
+                                <span class="skill-percent">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="100">
+                            <div class="skill-info">
+                                <span class="skill-name">R Programming</span>
+                                <span class="skill-percent">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="100">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="100">
+                            <div class="skill-info">
+                                <span class="skill-name">Advanced Excel</span>
+                                <span class="skill-percent">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="100">
+                            <div class="skill-info">
+                                <span class="skill-name">LaTeX</span>
+                                <span class="skill-percent">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="100">
+                            <div class="skill-info">
+                                <span class="skill-name">Microsoft Office</span>
+                                <span class="skill-percent">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Science &amp; Machine Learning</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-info">
+                                <span class="skill-name">Stata</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Collection Tools</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-brain"></i> Epidemiology, Data Science &amp; AI
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Data Science</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Artificial Intelligence</span>
+                        <span class="skill-tag">Mathematical Modeling</span>
+                        <span class="skill-tag">Disease Spread Modeling</span>
+                        <span class="skill-tag">Survival Analysis</span>
+                        <span class="skill-tag">Cox Proportional Hazards</span>
+                        <span class="skill-tag">Optimization Techniques</span>
+                        <span class="skill-tag">Demographic Analysis</span>
+                        <span class="skill-tag">Population Projection</span>
+                        <span class="skill-tag">Data Validation & QA</span>
+                        <span class="skill-tag">Research Methodology</span>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i> Tools & Software
+                    </h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>R</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-table"></i>
+                            <span>Stata</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-file-excel"></i>
+                            <span>Advanced Excel</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-superscript"></i>
+                            <span>LaTeX</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-robot"></i>
+                            <span>ML / AI Methods</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-shapes"></i>
+                            <span>GeoGebra</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git/GitHub</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-clipboard-list"></i>
+                            <span>Survey Data Collection</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-users"></i> Soft Skills
+                    </h3>
+                    <div class="math-skills">
+                        <div class="math-item">
+                            <span>Problem Solving</span>
+                            <div class="math-level">
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                            </div>
+                        </div>
+                        <div class="math-item">
+                            <span>Teamwork</span>
+                            <div class="math-level">
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                            </div>
+                        </div>
+                        <div class="math-item">
+                            <span>Analytical Thinking</span>
+                            <div class="math-level">
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                            </div>
+                        </div>
+                        <div class="math-item">
+                            <span>Communication</span>
+                            <div class="math-level">
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot"></div>
+                            </div>
+                        </div>
+                        <div class="math-item">
+                            <span>Research Skills</span>
+                            <div class="math-level">
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot"></div>
+                            </div>
+                        </div>
+                        <div class="math-item">
+                            <span>Adaptability</span>
+                            <div class="math-level">
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot active"></div>
+                                <div class="math-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Research &amp; Applied Work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-virus"></i>
+                        </div>
+                        <div class="project-badge">Master's Thesis · May–Sept 2026</div>
+                    </div>
+                    <h3 class="project-title">Resource Allocation for Cholera Prevention in Burundi</h3>
+                    <p class="project-description">
+                        Developed models to optimize allocation of limited public health resources for cholera prevention, evaluating intervention strategies to support evidence-based decision-making in resource-constrained settings.
+                    </p>
+                    <div class="project-tech">
+                        <span>R</span>
+                        <span>Python</span>
+                        <span>Mathematical Modeling</span>
+                        <span>Optimization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anicet-NDI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="project-badge">Thesis · 2024–2025</div>
+                    </div>
+                    <h3 class="project-title">Rwanda Population Projection 2050</h3>
+                    <p class="project-description">
+                        Projected 40% population growth by 2050 with a significant aging demographic shift, analyzing labor market implications and policy recommendations.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>R</span>
+                        <span>Excel</span>
+                        <span>Demographic Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anicet-NDI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-badge">Survival Analysis · 2026</div>
+                    </div>
+                    <h3 class="project-title">Malignant Melanoma Survival Analysis</h3>
+                    <p class="project-description">
+                        Identified ulceration (HR=3.20) and tumor thickness (HR=1.115) as key mortality predictors. The Cox model achieved 75.3% concordance in distinguishing patient risk.
+                    </p>
+                    <div class="project-tech">
+                        <span>R</span>
+                        <span>Survival Analysis</span>
+                        <span>Cox PH Model</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anicet-NDI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shapes"></i>
+                        </div>
+                        <div class="project-badge">AIMS Rwanda · 2025</div>
+                    </div>
+                    <h3 class="project-title">Geometric Jigsaw: Shape Dissections</h3>
+                    <p class="project-description">
+                        Developed efficient dissection algorithms that reduced transformation steps by 25%, enhancing spatial reasoning and mathematical problem-solving.
+                    </p>
+                    <div class="project-tech">
+                        <span>GeoGebra</span>
+                        <span>Mathematical Modeling</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anicet-NDI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="project-badge">AIMS Rwanda · 2025</div>
+                    </div>
+                    <h3 class="project-title">Strong Password Checker</h3>
+                    <p class="project-description">
+                        Evaluates password strength based on complexity criteria and successfully identified 95% of weak passwords in test datasets.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>String Manipulation</span>
+                        <span>Logic</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anicet-NDI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="project-badge">AIMS Rwanda · 2025</div>
+                    </div>
+                    <h3 class="project-title">Work-Energy Theorem Application</h3>
+                    <p class="project-description">
+                        Validated theorem applications in frictionless systems and demonstrated energy conservation principles in practical scenarios.
+                    </p>
+                    <div class="project-tech">
+                        <span>Physics Simulation</span>
+                        <span>Mathematical Derivation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Anicet-NDI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's Collaborate</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <a href="mailto:ndinayoanicet@gmail.com">ndinayoanicet@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <a href="tel:+250790205029">+250 790 205 029</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/anicet-ndinayo-015a1a399" target="_blank">/in/anicet-ndinayo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/Anicet-NDI" target="_blank">@Anicet-NDI</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-availability">
+                        <h4>Availability</h4>
+                        <p>Open to research collaborations, internships, and opportunities in public health, epidemiology, and development sectors.</p>
+                        <div class="availability-status">
+                            <span class="status-dot active"></span>
+                            <span>Available for new opportunities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <!-- Formspree Form for Cloudflare Pages -->
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contact-form">
+                        <input type="hidden" name="_subject" value="New Message from Portfolio - Ndinayo Anicet">
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <h3 class="form-title">Send me a message</h3>
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">NA</span>
+                <span class="logo-name">Ndinayo Anicet</span>
+            </div>
+            
+            <p class="footer-quote">
+                "Evidence-based solutions for healthier communities."
+            </p>
+            
+            <div class="footer-social">
+                <a href="https://github.com/Anicet-NDI" target="_blank" class="footer-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/anicet-ndinayo-015a1a399" target="_blank" class="footer-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:ndinayoanicet@gmail.com" class="footer-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <p class="footer-copyright">
+                &copy; 2026 Ndinayo Anicet. All rights reserved.
+                <br>
+                
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/threejs-setup.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Profile image handling
+        function showPlaceholder() {
+            const img = document.getElementById('profile-img');
+            if (img && img.parentNode) {
+                const placeholder = document.createElement('div');
+                placeholder.className = 'avatar-placeholder';
+                placeholder.innerHTML = '<i class="fas fa-user-astronaut"></i>';
+                img.parentNode.appendChild(placeholder);
+                img.style.display = 'none';
+            }
+        }
+        
+        function showAboutPlaceholder() {
+            const img = document.getElementById('about-profile-img');
+            const placeholder = document.getElementById('about-placeholder');
+            if (img && placeholder) {
+                img.style.display = 'none';
+                placeholder.style.display = 'flex';
+            }
+        }
+        
+        // Contact form handling lives in js/form-handler.js
+    </script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>
